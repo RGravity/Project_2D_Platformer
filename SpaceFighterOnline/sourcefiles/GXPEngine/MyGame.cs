@@ -22,6 +22,7 @@ public class MyGame : Game
 	void Update () {
 		//empty
         //sdsda
+		// some text
 	}
 
 	static void Main() {
