@@ -34,8 +34,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ground.cs" />
     <Compile Include="GXPEngine\Sound.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="MyGame.cs" />

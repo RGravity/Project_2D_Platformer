@@ -11,7 +11,8 @@ public class MyGame : Game
         _background = new Sprite("sky.png");
         AddChild(_background);
 
-        _level = new Level();
+        string level = "level.tmx";
+        _level = new Level(level);
         AddChild(_level);
 
         game.Remove(this);
