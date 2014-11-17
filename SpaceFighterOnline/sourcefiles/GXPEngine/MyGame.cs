@@ -3,26 +3,23 @@ using GXPEngine;
 using System.Drawing;
 
 public class MyGame : Game
-{	
+{
+    Sprite _background;
+    Level _level;
 	public MyGame () : base(800, 600, false)
 	{
-		//create a canvas
-		Canvas canvas = new Canvas(800, 600);
+        _background = new Sprite("sky.png");
+        AddChild(_background);
 
-		//add some content
-		canvas.graphics.FillRectangle(new SolidBrush(Color.Red), new Rectangle(0, 0, 400, 300));
-		canvas.graphics.FillRectangle(new SolidBrush(Color.Blue), new Rectangle(400, 0, 400, 300));
-		canvas.graphics.FillRectangle(new SolidBrush(Color.Yellow), new Rectangle(0, 300, 400, 300));
-		canvas.graphics.FillRectangle(new SolidBrush(Color.Gray), new Rectangle(400, 300, 400, 300));
+        _level = new Level();
+        AddChild(_level);
 
-		//add canvas to display list
-		AddChild(canvas);
+        game.Remove(this);
+        game.Add(this);
 	}
 	
 	void Update () {
-		//empty
-        //sdsda
-		// some text
+
 	}
 
 	static void Main() {
